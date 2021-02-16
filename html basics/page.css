@@ -51,6 +51,7 @@ section {
 #div-1 {
   display: flex;
   justify-content: space-between;
+  padding: 20px;
 }
 
 #div-1 div {
@@ -63,7 +64,7 @@ section {
 }
 
 #div-2 {
-  padding: 20px 0px;
+  padding: 20px;
   overflow: auto;
 }
 
@@ -83,16 +84,12 @@ section {
 }
 
 #div-3 {
-  padding: 20px 0px;
+  padding: 20px;
 }
 
 form {
   display: flex;
   justify-content: space-between;
-}
-
-form div {
-  padding: 10px 0px;
 }
 
 input {
@@ -103,6 +100,10 @@ button {
   margin: 10px 0px;
   height: 40px;
   width: 80px;
+}
+
+#div-4 {
+  padding: 20px;
 }
 
 table,
