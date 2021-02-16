@@ -1,0 +1,124 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+nav {
+  padding: 20px;
+  border: 1px solid;
+  margin: 30px;
+  margin-bottom: 0px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav ul li {
+  display: block;
+  padding: 10px;
+  border: 1px solid;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#container {
+  display: flex;
+  margin: 0px 30px 30px 30px;
+  border: 1px solid;
+}
+
+aside {
+  padding: 20px;
+  border: 1px solid;
+  width: 10%;
+}
+
+aside ul li {
+  padding: 10px;
+  text-align: center;
+}
+
+section {
+  padding: 20px;
+  width: 90%;
+}
+
+#div-1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+#div-1 div {
+  padding: 5px;
+  border: 1px solid;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  line-height: 150px;
+}
+
+#div-2 {
+  padding: 20px 0px;
+  overflow: auto;
+}
+
+#div-2 div {
+  float: left;
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  line-height: 300px;
+  border: 1px solid;
+  margin: 0px 20px 20px 0px;
+}
+
+#div-2 p {
+  display: inline;
+  padding: 20px;
+}
+
+#div-3 {
+  padding: 20px 0px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
+form div {
+  padding: 10px 0px;
+}
+
+input {
+  height: 25px;
+}
+
+button {
+  margin: 10px 0px;
+  height: 40px;
+  width: 80px;
+}
+
+table,
+th {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+td {
+  border-right: 1px solid;
+  border-left: 1px solid;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
