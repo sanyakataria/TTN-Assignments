@@ -95,6 +95,7 @@ i {
   background-color: #79b530;
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 .header-sec3 nav {
