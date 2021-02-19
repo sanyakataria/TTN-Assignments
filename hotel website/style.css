@@ -30,7 +30,7 @@
   list-style-type: none;
   display: inline;
   border-right: 1px solid;
-  padding: 0px 10px;
+  padding: 0px 12px;
 }
 
 .primary-ul li:first-child {
@@ -70,14 +70,16 @@ i {
   height: 55px;
 }
 
-.header-sec2 div {
-  display: flex;
-  padding-left: 50px;
-}
-
 .div-wrapper div {
+  display: flex;
+  padding-left: 70px;
   margin: auto;
   font-size: 15px;
+}
+
+.div-wrapper{
+  display: flex;
+  margin-right: 0px;
 }
 
 .div-wrapper div:last-child {
