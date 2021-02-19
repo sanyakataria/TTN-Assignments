@@ -28,7 +28,7 @@
   border-right: 1px solid;
 }
 
-.primary-ul li:first-child {
+.primary-ul li a:first-child {
   padding-left: 0px;
 }
 
