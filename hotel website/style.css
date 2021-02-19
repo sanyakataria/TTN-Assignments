@@ -4,12 +4,17 @@
   box-sizing: border-box;
 }
 
+.outer-container {
+  max-width: 100%;
+}
+
 .header-sec1 {
   background-color: #f8f8f8;
 }
 
 .primary-nav {
-  width: 85%;
+  width: 1100px;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -24,7 +29,6 @@
 .primary-ul li {
   list-style-type: none;
   display: inline;
-  /* padding: 0px 10px; */
   border-right: 1px solid;
 }
 
@@ -54,7 +58,8 @@ i {
 }
 
 .header-sec2 {
-  width: 85%;
+  width: 1100px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 10px 0px;
   display: flex;
@@ -100,7 +105,8 @@ i {
 }
 
 .header-sec3 nav {
-  width: 85%;
+  width: 1100px;
+  max-width: 100%;
   margin: 0px auto;
   padding: 10px 0px;
 }
@@ -121,7 +127,11 @@ i {
 }
 
 main {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.4)
+    ),
     url("./assets/banner-image.jpg");
   background-repeat: no-repeat;
   height: 670px;
@@ -168,11 +178,14 @@ main {
 }
 
 .card-wrapper {
-  width: 85%;
   display: flex;
+  width: 1100px;
+  max-width: 100%;
   position: absolute;
   bottom: -150px;
-  left: 7.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: space-around;
 }
 
 .card {
