@@ -6,8 +6,7 @@
 }
 
 aside {
-  width: 100%;
-  max-width: 30vw;
+  width: 30vw;
   height: 100vh;
   position: absolute;
   right: 0;
@@ -201,8 +200,8 @@ header hr {
   }
 
   aside {
-    width: 100vw;
-    height: 75vh;
+    width: 50vw;
+    height: 70vh;
   }
 
   .container {
