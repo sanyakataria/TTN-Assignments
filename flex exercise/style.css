@@ -1,0 +1,219 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+h1 {
+  line-height: 5rem;
+}
+
+h2,
+h3 {
+  padding-bottom: 2rem;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  padding: 10px 16px;
+  margin: 0px;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+header {
+  height: 80vh;
+  border-bottom: 3px solid rgb(13, 13, 13);
+}
+
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./assets/peopleonstreet.jpg") no-repeat top center/cover;
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.head-content {
+  width: 70%;
+  color: white;
+  text-align: center;
+  padding: 2rem 5rem;
+}
+
+.a-primary {
+  background-color: #4c98dc;
+  color: white;
+}
+
+.first {
+  padding: 5rem;
+  padding-right: 0rem;
+  background-color: #fafafa;
+  width: 100%;
+}
+
+.container1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  padding: 0rem 3rem;
+}
+
+.second {
+  background-color: #4c98dc;
+  padding: 5rem;
+  padding-left: 0rem;
+  color: white;
+  width: 100%;
+}
+
+.a-secondary {
+  color: #4c98dc;
+  background-color: white;
+}
+
+.third {
+  width: 100%;
+  padding: 5rem;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+.outer-div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sm-div {
+  text-align: center;
+  padding: 2rem;
+}
+
+.outer-div img {
+  width: 250px;
+  height: 250px;
+  margin: 2rem 0rem;
+}
+
+footer {
+  text-align: center;
+  padding: 3rem;
+}
+
+footer i {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .first,
+  .second,
+  .third {
+    padding: 1rem;
+  }
+  h3,
+  h2 {
+    padding-bottom: 20px;
+  }
+
+  .first img,
+  .second img {
+    height: 200px;
+    width: 200px;
+    align-self: center;
+  }
+
+  .third img {
+    margin: 8px;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .outer-div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sm-div {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    font-size: 14px;
+  }
+
+  h2,
+  h3 {
+    padding-bottom: 14px;
+  }
+
+  .head-content {
+    padding: 1rem;
+  }
+
+  .first,
+  .second,
+  .third {
+    padding: 1rem;
+  }
+
+  .first .container1 {
+    flex-direction: column;
+  }
+
+  .second .container1 {
+    flex-direction: column-reverse;
+  }
+
+  .first img,
+  .second img {
+    height: 200px;
+    width: 200px;
+    align-self: center;
+    padding: 1rem;
+  }
+
+  .third img {
+    width: 150px;
+    height: 150px;
+    margin: 8px;
+  }
+
+  .content {
+    padding: 0rem;
+  }
+
+  .outer-div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sm-div {
+    padding: 1rem;
+  }
+}

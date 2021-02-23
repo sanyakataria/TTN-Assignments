@@ -81,7 +81,8 @@ header {
 }
 
 header hr {
-  max-width: 85%;
+  width: 85%;
+  max-width: 1100px;
   margin: 0 auto;
   border: 0.5px solid gray;
 }
@@ -167,11 +168,11 @@ header hr {
 }
 
 @media screen and (max-width: 425px) {
-  html {
+  body {
     font-size: 12px;
   }
   header {
-    height: 70vh;
+    height: 75vh;
   }
   .nav-bar {
     padding: 20px 0px;
@@ -180,6 +181,7 @@ header hr {
   .sm-div {
     display: block;
     margin: 0 auto;
+    padding: 8px 10px;
   }
 
   .div-wrapper {
@@ -188,7 +190,6 @@ header hr {
 
   .div-wrapper h1 {
     padding: 16px;
-    padding-left: 0px;
   }
 
   .div-wrapper .btn {
@@ -196,7 +197,7 @@ header hr {
   }
 
   .div-wrapper div:nth-child(3) {
-    padding-left: 0px;
+    padding-left: 10px;
   }
 
   aside {
@@ -227,7 +228,7 @@ header hr {
   }
 
   header {
-    height: 65vh;
+    height: 75vh;
   }
   .nav-bar {
     padding: 20px 0px;
