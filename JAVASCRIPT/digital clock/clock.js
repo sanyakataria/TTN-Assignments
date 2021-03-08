@@ -7,8 +7,11 @@ function myfunc() {
     var sec = fulldate.getSeconds();
     var session = "AM";
 
-    if (hour >= 12) {
+    if (hour > 12) {
       hour = hour % 12;
+      session = "PM";
+    } else if (hour == 12) {
+      hour = 12;
       session = "PM";
     } else if (hour == 0) {
       hour = 12;
