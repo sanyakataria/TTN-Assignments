@@ -66,7 +66,7 @@ const song = {
 
 document.body.append(
   `<div class="song">
-    <p> ${song.name} — Tupac (Featuring ${song.featuring}) </p> 
+    <p> ${song.name} — ${song.artist} (Featuring ${song.featuring}) </p> 
     </div> `
 );
 
