@@ -22,7 +22,7 @@ let ans1 = "";
 const map1 = new Map();
 function combination(str, ans) {
   if (str.length == 0) {
-    if (!map1.has(ans)) {
+    if (ans && !map1.has(ans)) {
       map1.set(ans, 1);
     }
     return;
