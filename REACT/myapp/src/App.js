@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+// import Radium, { StyleRoot } from "radium";
+// import styled from 'styled-components';
 import "./App.css";
 import Person from "./Person/Person";
 
@@ -50,15 +52,6 @@ function App() {
     });
   };
 
-  //inline style
-  const style = {
-    backgroundColor: "white",
-    font: "inherit",
-    border: "3px solid blue",
-    padding: "8px",
-    cursor: "pointer",
-  };
-
   const togglePersonsHandler = () => {
     const doesShow = personState.showPersons;
     setpersonsState({
@@ -81,6 +74,35 @@ function App() {
       showPersons: true,
     });
   };
+  //styled component
+  // const StyledButton = styled.button`
+  // background-color: ${(props) => (props.alt ? "red" : "green")};
+  //   color:white;
+  //   font: inherit;
+  //   border: 3px solid blue;
+  //   padding: 8px;
+  //   cursor: pointer;
+
+  //    &:hover {
+  //     background-color: ${(props) => (props.alt ? "salmon" : "lightgreen")};
+  //      color: black
+  //    },
+  // `;
+
+  //inline style
+  // const style = {
+  //   backgroundColor: "green",
+  //   color: "white",
+  //   font: "inherit",
+  //   border: "3px solid blue",
+  //   padding: "8px",
+  //   cursor: "pointer",
+  //   // done through radium
+  //   // ":hover": {
+  //   //   backgroundColor: "lightgreen",
+  //   //   color: "black",
+  //   // },
+  // };
 
   var persons = null;
   if (personState.showPersons) {
@@ -97,7 +119,10 @@ function App() {
             />
           );
         })}
-        {/* <Person
+      </div>
+    );
+    {
+      /* <Person
           name={personState.persons[0].name}
           age={personState.persons[0].age}
         />
@@ -108,26 +133,47 @@ function App() {
           changed={nameChangeHandler}
         >
           my hobbies : racing.
-        </Person>
-        <Person
+          </Person>
+          <Person
           name={personState.persons[2].name}
           age={personState.persons[2].age}
-        /> */}
-      </div>
-    );
+        /> */
+    }
+
+    //dynamically adding style
+    // style.backgroundColor = "red";
+    // done through radium
+    // style[":hover"] = {
+    //   backgroundColor: "pink",
+    //   color: "black",
+    // };
+  }
+
+  //dynamicaally adding classes
+  let classes = [];
+
+  if (personState.persons.length <= 2) {
+    classes.push("red"); //classes=['red']
+  }
+  if (personState.persons.length <= 1) {
+    classes.push("bold"); //classes=['red','bold']
   }
 
   return (
+    // <StyleRoot>
     <div className="App">
       <h1>Hi, I am react app</h1>
-      <p>yayy, ths is working.</p>
-      {/* dont use the below syntax that is inefficient.,use bind that is present in line 45. */}
-      <button style={style} onClick={togglePersonsHandler}>
+      <p className={classes.join(" ")}>yayy, ths is working.</p>
+      <button className="button"
+        // alt={personState.showPersons}
+        onClick={togglePersonsHandler}
+      >
         Switch Name
       </button>
       {/* <Person></Person> == <Person/> */}
       {persons}
     </div>
+    // </StyleRoot>
   );
 
   // return (React.createElement(
@@ -138,4 +184,5 @@ function App() {
   // javascript object to be passed in space of null
 }
 
+// export default Radium(App);
 export default App;

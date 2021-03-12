@@ -7,16 +7,17 @@ function App() {
     fruits: [],
   });
 
-  const addRowHandler = (input_tag, name) => {
-    console.log(name);
-    input_tag.value = "";
-    console.log(input_tag);
-    var fname = name.split("-");
+  const addRowHandler = (event) => {
+    event.preventDefault();
+    console.log(event.target.configname.value);
+    // input_tag.value = "";
+    // console.log(input_tag);
+    var fname = event.target.configname.value.split("-");
     console.log(fname);
     setFruitState({
       fruits: [
         ...fruitState.fruits,
-        { id: name, name: fname[0], quantity: fname[1] },
+        { id: event.target.configname, name: fname[0], quantity: fname[1] },
       ],
     });
     console.log(fruitState.fruits);
@@ -55,32 +56,12 @@ function App() {
   );
 
   return (
-    <div className="App">
-      <input
-        type="text"
-        id="configname"
-        name="configname"
-        onKeyPress={(event) =>
-          handleKeyPress(
-            event,
-            document.getElementById("configname"),
-            document.getElementById("configname").value
-          )
-        }
-      ></input>
+    <form className="App" onSubmit={(event) => addRowHandler(event)}>
+      <input type="text" id="configname" name="configname"></input>
       <br />
-      <button
-        onClick={() =>
-          addRowHandler(
-            document.getElementById("configname"),
-            document.getElementById("configname").value
-          )
-        }
-      >
-        Submit
-      </button>
+      <button>Submit</button>
       {fruits}
-    </div>
+    </form>
   );
 }
 
