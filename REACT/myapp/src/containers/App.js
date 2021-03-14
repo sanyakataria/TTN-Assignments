@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 // import Radium, { StyleRoot } from "radium";
 // import styled from 'styled-components';
-import "./App.css";
-import Person from "./Person/Person";
+// import classes from "./App.css";
+// *******section5-video73 css modules not working due to  react-script version difference. he used version 1.0 and i have version 4.0.
+// in case react script version is greater than 2. then you just have to rename css file to app.module.css and it will work automatically. no need to eject.
+import classes from "./App.css";
+import Persons from "../Components/Persons/Persons";
+import Cockpit from '../Components/Cockpit/Cockpit'
 
-function App() {
+function App(props) {
   // stateful component
 
   const [personState, setpersonsState] = useState({
@@ -107,38 +111,12 @@ function App() {
   var persons = null;
   if (personState.showPersons) {
     persons = (
-      <div>
-        {personState.persons.map((person, index) => {
-          return (
-            <Person
-              name={person.name}
-              age={person.age}
-              click={() => deltePersonHandler(index)}
-              key={person.id}
-              changed={(event) => nameChangeHandler(event, person.id)}
-            />
-          );
-        })}
-      </div>
+      <Persons
+        persons={personState.persons}
+        clicked={deltePersonHandler}
+        changed={nameChangeHandler}
+      />
     );
-    {
-      /* <Person
-          name={personState.persons[0].name}
-          age={personState.persons[0].age}
-        />
-        <Person
-          name={personState.persons[1].name}
-          age={personState.persons[1].age}
-          click={switchNameHandler.bind(this, "maxilmillian")}
-          changed={nameChangeHandler}
-        >
-          my hobbies : racing.
-          </Person>
-          <Person
-          name={personState.persons[2].name}
-          age={personState.persons[2].age}
-        /> */
-    }
 
     //dynamically adding style
     // style.backgroundColor = "red";
@@ -147,30 +125,20 @@ function App() {
     //   backgroundColor: "pink",
     //   color: "black",
     // };
+
   }
 
   //dynamicaally adding classes
-  let classes = [];
-
-  if (personState.persons.length <= 2) {
-    classes.push("red"); //classes=['red']
-  }
-  if (personState.persons.length <= 1) {
-    classes.push("bold"); //classes=['red','bold']
-  }
 
   return (
     // <StyleRoot>
-    <div className="App">
-      <h1>Hi, I am react app</h1>
-      <p className={classes.join(" ")}>yayy, ths is working.</p>
-      <button className="button"
-        // alt={personState.showPersons}
-        onClick={togglePersonsHandler}
-      >
-        Switch Name
-      </button>
-      {/* <Person></Person> == <Person/> */}
+    <div className={classes.App}>
+      <Cockpit
+        title={props.appTitle}
+        showPersons={personState.showPersons}
+        persons={personState.persons}
+        clicked={togglePersonsHandler}
+      />
       {persons}
     </div>
     // </StyleRoot>
@@ -186,3 +154,20 @@ function App() {
 
 // export default Radium(App);
 export default App;
+
+/* <Person
+          name={personState.persons[0].name}
+          age={personState.persons[0].age}
+        />
+        <Person
+          name={personState.persons[1].name}
+          age={personState.persons[1].age}
+          click={switchNameHandler.bind(this, "maxilmillian")}
+          changed={nameChangeHandler}
+        >
+          my hobbies : racing.
+          </Person>
+          <Person
+          name={personState.persons[2].name}
+          age={personState.persons[2].age}
+        /> */
