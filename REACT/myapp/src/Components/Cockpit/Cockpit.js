@@ -11,7 +11,7 @@ const Cockpit = (props) => {
     return () => {
       console.log("use effect clean up ");
     }
-  }, []);
+  }, [props.persons]);
 
   //second argument of useeffect will contain for which elements u want to run that. if it is empt, it will only execute during the reload only.
 

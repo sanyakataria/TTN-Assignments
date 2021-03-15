@@ -61,11 +61,12 @@ function App(props) {
   const togglePersonsHandler = () => {
     const doesShow = personState.showPersons;
     setpersonsState({
-      persons: [
-        { id: "asdfg", name: "max", age: "28" },
-        { id: "qwert", name: "manu", age: "29" },
-        { id: "zxcvb", name: "stephie", age: "26" },
-      ],
+      ...personState,
+      // persons: [
+      //   { id: "asdfg", name: "max", age: "28" },
+      //   { id: "qwert", name: "manu", age: "29" },
+      //   { id: "zxcvb", name: "stephie", age: "26" },
+      // ],
       showPersons: !doesShow,
     });
   };
