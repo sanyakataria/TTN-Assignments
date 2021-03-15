@@ -6,7 +6,9 @@ import React, { useState } from "react";
 // in case react script version is greater than 2. then you just have to rename css file to app.module.css and it will work automatically. no need to eject.
 import classes from "./App.css";
 import Persons from "../Components/Persons/Persons";
-import Cockpit from '../Components/Cockpit/Cockpit'
+import Cockpit from '../Components/Cockpit/Cockpit';
+import withClass from '../hoc/withClass';
+import Aux from '../hoc/Aux';
 
 function App(props) {
   // stateful component
@@ -132,7 +134,8 @@ function App(props) {
 
   return (
     // <StyleRoot>
-    <div className={classes.App}>
+    // <div className={classes.App}>
+    <Aux>
       <Cockpit
         title={props.appTitle}
         showPersons={personState.showPersons}
@@ -140,7 +143,8 @@ function App(props) {
         clicked={togglePersonsHandler}
       />
       {persons}
-    </div>
+      </Aux>
+    // </div>
     // </StyleRoot>
   );
 
@@ -153,7 +157,8 @@ function App(props) {
 }
 
 // export default Radium(App);
-export default App;
+// export default App;
+export default withClass(App, classes.App);
 
 /* <Person
           name={personState.persons[0].name}

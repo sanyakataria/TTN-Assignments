@@ -1,7 +1,20 @@
-import React from "react";
+import React, {useEffect} from "react";
 import classes from "./Cockpit.css";
 
 const Cockpit = (props) => {
+  useEffect(() => {
+    console.log("cockpit.js - use effect.");
+    //http request...
+    setTimeout(() => {
+      alert('saved data to cloud');
+    }, 1000);
+    return () => {
+      console.log("use effect clean up ");
+    }
+  }, []);
+
+  //second argument of useeffect will contain for which elements u want to run that. if it is empt, it will only execute during the reload only.
+
   let assignClasses = [];
   let btnClass = "";
 
