@@ -17,16 +17,12 @@ const INGREDIENT_PRICES = {
 
 class BurgerBuilder extends Component {
   state = {
-    ingredients: {
-      salad: 0,
-      bacon: 0,
-      cheese: 0,
-      meat: 0,
-    },
+    ingredients: null,
     totalPrice: 4,
     purchasable: false,
     purchasing: false,
     loading: false,
+    error:false
   };
 
   componentDidMount() {
@@ -140,7 +136,7 @@ class BurgerBuilder extends Component {
     }
     let orderSummary = null;
 
-    let burger = <Spinner />;
+    let burger = this.state.error ? <p>Ingredients can't be loaded</p> : <Spinner />;
     if (this.state.ingredients) {
       burger = (
         <Aux>
