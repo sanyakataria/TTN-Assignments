@@ -7,7 +7,6 @@ import reducer from "./store/reducer";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-
 const store = createStore(reducer);
 
 const app = (
@@ -16,6 +15,7 @@ const app = (
       <App />
     </BrowserRouter>
   </Provider>
+
 );
 ReactDOM.render(
   <React.StrictMode>{app}</React.StrictMode>,

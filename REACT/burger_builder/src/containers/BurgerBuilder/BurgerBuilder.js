@@ -19,6 +19,7 @@ class BurgerBuilder extends Component {
 
   componentDidMount() {
     console.log(this.props);
+
     // axios
     //   .get(
     //     "https://react-my-burger-c9213-default-rtdb.firebaseio.com/ingredients.json"
