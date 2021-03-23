@@ -10,9 +10,9 @@ import withErrorhandler from "../../hoc/withErrorHandler/withErrorHandler";
 
 const INGREDIENT_PRICES = {
   salad: 0.5,
+  bacon: 0.7,
   cheese: 0.4,
   meat: 1.3,
-  bacon: 0.7,
 };
 
 class BurgerBuilder extends Component {
@@ -26,6 +26,7 @@ class BurgerBuilder extends Component {
   };
 
   componentDidMount() {
+    console.log(this.props);
     axios
       .get(
         "https://react-my-burger-c9213-default-rtdb.firebaseio.com/ingredients.json"
@@ -98,32 +99,20 @@ class BurgerBuilder extends Component {
   };
 
   purchaseContinueHandler = () => {
-    // alert("you continue");
-    this.setState({ loading: true });
-    const order = {
-      ingredients: this.state.ingredients,
-      price: this.state.totalPrice,
-      customer: {
-        name: "max",
-        address: {
-          street: "test123",
-          zipcode: "214609",
-          country: "india",
-        },
-        email: "test@test.com",
-        deliveryMethod: "fastest",
-      },
-    };
-    axios
-      .post("/orders.json", order)
-      .then((response) => {
-        // console.log(response);
-        this.setState({ loading: false, purchasing: false });
-      })
-      .catch((error) => {
-        // console.log(error);
-        this.setState({ loading: false, purchasing: false });
-      });
+    const queryParams = [];
+    for (let i in this.state.ingredients) {
+      queryParams.push(
+        encodeURIComponent(i) +
+          "=" +
+          encodeURIComponent(this.state.ingredients[i])
+      );
+    }
+    queryParams.push("price=" + this.state.totalPrice);
+    const queryString = queryParams.join("&");
+    this.props.history.push({
+      pathname: "checkout",
+      search: "?" + queryString,
+    });
   };
 
   render() {
