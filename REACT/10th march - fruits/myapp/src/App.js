@@ -42,16 +42,20 @@ function App() {
 
   var fruits = (
     <div>
-      {fruitState.fruits.map((fruit, index) => {
-        return (
-          <Fruits
-            key={fruit.id}
-            name={fruit.name}
-            quantity={fruit.quantity}
-            click={() => deleteFruitHandler(index)}
-          />
-        );
-      })}
+      <table className="table">
+        <tbody>
+          {fruitState.fruits.map((fruit, index) => {
+            return (
+              <Fruits
+                key={fruit.id}
+                name={fruit.name}
+                quantity={fruit.quantity}
+                click={() => deleteFruitHandler(index)}
+              />
+            );
+          })}
+        </tbody>
+      </table>
     </div>
   );
 
