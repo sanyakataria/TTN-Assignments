@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+}
+
+.size{
+    width: 40px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 2.6em;
+}
+
+.font{
+    font-size: 14px;
+}
+
+.overlay{
+    position: absolute;
+    bottom: 0px;
+}
+
+.overlay p{
+    background: rgba(0,0,0,0.7);
+    color: white;
+    font-size: 10px;
+}
+
+.arrow{
+    position: absolute;
+    bottom: 5px;
+    right: 25px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: white;
+}
+
+.arrow p{
+    display: block;
+    line-height: 2rem;
+}
+
+.c-img{
+    position: absolute;
+    bottom: 50%;
+    right: 40%;
+    border-radius: 50%;
+}
+
+.mycarousel ul{
+    position: static;
+}
+
+.mycarousel ul li{
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background-color: rgb(78, 139, 160);
+}
+
+.mycarousel2 ul li{
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+    background-color: rgb(78, 139, 160);
+}
