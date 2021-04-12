@@ -1,0 +1,429 @@
+@import 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: lighter;
+}
+
+.navbar {
+    font-size: 14px;
+    padding: 0 64px;
+    border: $border;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        color: $text-secondary;
+        text-decoration: none;
+        padding: 6px 20px 6px 0px;
+        cursor: pointer;
+        display: inline-block;
+        height: 100%;
+        line-height: 1.5rem;
+    }
+}
+
+
+
+form {
+    display: flex;
+    align-items: center;
+
+    div {
+        display: flex;
+
+        input {
+            line-height: 1.5rem;
+            margin: 0px;
+            padding: 6px 12px;
+            width: 200px;
+            font-weight: 400;
+            font-size: 1rem;
+            border: $border;
+        }
+    }
+}
+
+.size {
+    display: block;
+    width: 40px;
+    text-align: center;
+    line-height: 2.6em;
+    border: $border;
+}
+
+.container {
+    padding: 24px 64px;
+    width: 100%;
+    margin: 0 auto;
+    background: $bg-light;
+}
+
+.row1 {
+    display: flex;
+    justify-content: space-between;
+
+    .col-1 {
+        padding: 24px 48px;
+        font-size: 28px;
+        border: $border;
+        background: $bg-white;
+    }
+
+    .col-2 {
+        display: flex;
+        background: $bg-white;
+
+    }
+}
+
+.cards {
+    padding: 24px;
+    text-align: center;
+    border: $border;
+
+    i {
+        margin: 18px 0;
+    }
+
+    span {
+        color: $text-primary;
+    }
+}
+
+h3 {
+    padding: 6px 0px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 38px;
+    padding: 12px 36px 12px 12px
+}
+
+.btn {
+    color: $text-white;
+    background-color: $bg-primary;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    font-weight: 400;
+    border: none;
+    padding: 8px 48px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.row2 {
+    background: $bg-white;
+    margin: 24px 0;
+    display: flex;
+
+    .col {
+        padding: 16px;
+        border: $border;
+
+        button {
+            display: block;
+            margin-right: 0px;
+            float: right;
+        }
+    }
+
+    p {
+        line-height: 1.5rem;
+        padding: 8px;
+    }
+}
+
+
+
+.row3 {
+    display: flex;
+
+    div {
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    i {
+        margin: 20px 0;
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 1.2rem;
+        padding: 10px;
+    }
+}
+
+.row4 {
+    background: $bg-white;
+    margin: 24px 0;
+    padding: 16px 0px;
+    border: $border;
+
+    h2 {
+        text-align: left;
+        color: $text-primary;
+        font-weight: 400;
+        padding: 12px 16px;
+    }
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    height: 270px;
+
+    div {
+        padding: 0 15px;
+        position: relative;
+    }
+
+    img {
+        width: 254px;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: -146px;
+    margin-left: -8px;
+
+    p {
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        font-size: 10px;
+        padding: 20px;
+        width: 240px;
+        line-height: 1rem;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+
+
+.arrow {
+    position: absolute;
+    top: -186px;
+    right: -202px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: white;
+
+    button {
+        padding: 10px;
+    }
+}
+
+.mycarousel {
+    position: relative;
+
+    ul {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        display: flex;
+    }
+
+    li {
+        list-style-type: none;
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+        margin: 6px;
+        background-color: lightblue;
+    }
+}
+
+.row5 {
+    display: flex;
+    justify-content: space-between;
+
+    .col-1 {
+        width: 70%;
+        background: $bg-white;
+        display: flex;
+        border: $border;
+        margin-right: 16px;
+
+    }
+
+    .col-2 {
+        width: 31%;
+        background: $bg-white;
+        border: $border;
+
+    }
+}
+
+.row5 .col-1 {
+    div {
+        padding: 48px;
+    }
+
+    h2 {
+        color: $text-primary;
+    }
+
+    ul {
+        padding: 0 40px;
+    }
+
+    li {
+        line-height: 2rem;
+    }
+
+    button {
+        float: right;
+        margin-top: 16px;
+    }
+
+    p {
+        line-height: 1.5rem;
+        padding: 16px 0px;
+    }
+}
+
+.col-2 {
+    div {
+        text-align: center;
+        position: relative;
+    }
+
+    .c-img {
+        position: absolute;
+        bottom: 45%;
+        right: 40%;
+        border-radius: 50%;
+    }
+
+}
+
+.description {
+    margin-top: 50px;
+
+    h5 {
+        color: $text-secondary;
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 1rem;
+        padding: 24px;
+        color: $text-secondary;
+    }
+}
+
+
+
+.mycarousel2 {
+    position: relative;
+
+    ul {
+        position: absolute;
+        left: 45%;
+        display: flex;
+    }
+
+    li {
+        list-style-type: none;
+        border-radius: 50%;
+        height: 6px;
+        width: 6px;
+        margin: 3px;
+        background-color: lightblue;
+    }
+}
+
+footer {
+    border: $border;
+    padding: 20px 64px;
+
+    ul,
+    p {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    h5 {
+        font-weight: bold;
+        color: $text-secondary;
+        font-size: 20px;
+        padding-bottom: 16px;
+        margin-bottom: 8px;
+    }
+}
+
+.footer-row1 {
+    display: flex;
+
+    div {
+        width: 25%;
+    }
+
+    .col1 {
+        li {
+            color: $text-primary;
+            padding: 3px;
+        }
+    }
+
+    .col2 {
+        padding: 0px 24px;
+
+        button {
+            padding: 6px 24px;
+            margin: 4px;
+        }
+    }
+
+    .col3 {
+        h6 {
+            color: $text-primary;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: $text-secondary;
+            margin-bottom: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    .col4 {
+        i {
+            padding: 8px;
+        }
+    }
+}
+
+.footer-row2 {
+    margin-top: 24px;
+    border-top: $border;
+    padding: 10px 0px;
+    color: $text-secondary;
+    display: flex;
+    justify-content: space-between;
+
+    p:last-child {
+        text-align: right;
+    }
+}
