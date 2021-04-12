@@ -13,8 +13,10 @@ h6 {
   font-weight: lighter; }
 
 .navbar {
+  padding: 0 64px; }
+
+.navbar {
   font-size: 14px;
-  padding: 0 64px;
   border: 1px solid #dee2e6;
   display: flex;
   justify-content: space-between; }
