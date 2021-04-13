@@ -33,7 +33,7 @@ header {
     &-a {
         background: $primary-color;
         // color: #fff;
-        color:set-text-color($primary-color);
+        color: set-text-color($primary-color);
     }
 
     &-b {

@@ -1,0 +1,118 @@
+@import "variables";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+figcaption,
+span {
+    font-weight: lighter;
+    color: $dark-color;
+}
+
+%big-text {
+    font-family: $google-font;
+    font-size: 24px;
+}
+
+%medium-text {
+    font-family: $roboto-font;
+    font-size: 16px;
+}
+
+.outer-container {
+    border: $border;
+    border-radius: $radius-8;
+    padding: 48px 40px 36px;
+    width: 450px;
+    margin: 64px auto;
+}
+
+input {
+    @extend %medium-text;
+    padding: 13px 15px;
+    margin: 2px;
+    border: $border;
+    border-radius: $radius-4;
+    color: $dark-color;
+    font-size: 16px;
+    width: 368px;
+    height: 54px;
+
+    &:focus {
+        outline-color: $blue;
+    }
+}
+
+a {
+    text-decoration: none;
+    font-family: $roboto-font;
+    font-size: 14px;
+    font-weight: bold;
+    color: $blue;
+    padding: 8px 1px;
+    display: inline-block;
+
+    // &:hover{
+    //     background: lightblue;
+    // }
+}
+
+button {
+    background: $blue;
+    color: white;
+    font-family: $roboto-font;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 24px;
+    border: none;
+    border-radius: $radius-4;
+}
+
+span {
+    display: block;
+    font-size: 14px;
+    font-family: $roboto-font;
+    color: $grey-color;
+}
+
+
+.inner-container {
+
+    .header {
+        text-align: center;
+    }
+
+    form {
+        margin-top: 30px
+    }
+
+    .content-div {
+        h1 {
+            @extend %big-text;
+            padding: 12px 0px;
+        }
+
+        h3 {
+            @extend %medium-text;
+        }
+    }
+
+    .info-div2 {
+        padding-top: 40px;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 36px 0px;
+    }
+
+}

@@ -19,16 +19,15 @@ span {
 
 
 .outer-container {
-    margin: 0 auto;
     border: $border;
     border-radius: $radius-8;
     padding: 48px 40px 36px;
-    margin: 30px 270px;
+    margin: 30px 278px;
 }
 
 .inner-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 %big-text {
@@ -183,12 +182,13 @@ form {
     align-items: center;
 
     figure {
-        margin-bottom: 80px
+        margin-bottom: 50px;
     }
 
     figcaption {
         @extend %medium-text;
-        font-weight: 300;
+        font-weight: 200;
+        line-height: 1.5rem;
         text-align: center;
         padding: 0px 10px;
         width: 250px;

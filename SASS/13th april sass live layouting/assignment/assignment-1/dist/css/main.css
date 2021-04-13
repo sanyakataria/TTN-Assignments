@@ -14,15 +14,14 @@ span {
   color: #202124; }
 
 .outer-container {
-  margin: 0 auto;
   border: 1px solid #dadce0;
   border-radius: 8px;
   padding: 48px 40px 36px;
-  margin: 30px 270px; }
+  margin: 30px 278px; }
 
 .inner-container {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-around; }
 
 .left h1 {
   font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
@@ -122,9 +121,10 @@ form {
   display: flex;
   align-items: center; }
   .right figure {
-    margin-bottom: 80px; }
+    margin-bottom: 50px; }
   .right figcaption {
-    font-weight: 300;
+    font-weight: 200;
+    line-height: 1.5rem;
     text-align: center;
     padding: 0px 10px;
     width: 250px; }

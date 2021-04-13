@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+figcaption,
+span {
+  font-weight: lighter;
+  color: #202124; }
+
+.inner-container .content-div h1 {
+  font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
+  font-size: 24px; }
+
+input, .inner-container .content-div h3 {
+  font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+  font-size: 16px; }
+
+.outer-container {
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 48px 40px 36px;
+  width: 450px;
+  margin: 64px auto; }
+
+input {
+  padding: 13px 15px;
+  margin: 2px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  color: #202124;
+  font-size: 16px;
+  width: 368px;
+  height: 54px; }
+  input:focus {
+    outline-color: #1a73e8; }
+
+a {
+  text-decoration: none;
+  font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1a73e8;
+  padding: 8px 1px;
+  display: inline-block; }
+
+button {
+  background: #1a73e8;
+  color: white;
+  font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 4px; }
+
+span {
+  display: block;
+  font-size: 14px;
+  font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+  color: #5f6368; }
+
+.inner-container .header {
+  text-align: center; }
+
+.inner-container form {
+  margin-top: 30px; }
+
+.inner-container .content-div h1 {
+  padding: 12px 0px; }
+
+.inner-container .info-div2 {
+  padding-top: 40px; }
+
+.inner-container .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 36px 0px; }
