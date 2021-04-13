@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+figcaption,
+span {
+  font-weight: lighter;
+  color: #202124; }
+
+.outer-container {
+  margin: 0 auto;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 48px 40px 36px;
+  margin: 30px 270px; }
+
+.inner-container {
+  display: flex;
+  justify-content: space-between; }
+
+.left h1 {
+  font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
+  font-size: 24px; }
+
+.left h3, form .name-div input, form .user-div input, form .password-div input, form .checkbox-div label, .right figcaption {
+  font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+  font-size: 16px; }
+
+.left h1 {
+  padding: 10px 0; }
+
+.left h3 {
+  line-height: 1.5rem; }
+
+.left .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 0px; }
+  .left .footer .left {
+    display: flex;
+    align-items: center; }
+  .left .footer a {
+    text-decoration: none;
+    font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #1B66C9;
+    padding: 12px;
+    margin-left: -10px; }
+    .left .footer a:hover {
+      background: #eff2f3; }
+  .left .footer button {
+    background: #1B66C9;
+    color: white;
+    font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 4px; }
+
+form .name-div input, form .user-div input, form .password-div input {
+  padding: 6px 8px;
+  margin: 2px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  color: #202124;
+  font-size: 14px;
+  box-sizing: content-box;
+  height: 20px; }
+
+input:focus {
+  outline-color: #1B66C9; }
+
+form {
+  width: 348px; }
+  form .name-div {
+    padding: 24px 0; }
+    form .name-div input {
+      width: 150px; }
+  form .user-div {
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    margin: 2px; }
+    form .user-div input {
+      border: none;
+      margin: 0; }
+    form .user-div span {
+      font-size: 14px;
+      margin-left: 60px; }
+    form .user-div:focus {
+      outline-color: #1B66C9; }
+  form .info-div {
+    padding-left: 10px;
+    font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif; }
+    form .info-div span {
+      color: #5f6368;
+      font-size: 12px; }
+  form .password-div {
+    padding-top: 24px; }
+    form .password-div input {
+      width: 150px; }
+  form .checkbox-div {
+    padding: 20px 0px;
+    display: inline-flex; }
+    form .checkbox-div input {
+      height: 16px;
+      width: 16px;
+      margin: 0 2px; }
+    form .checkbox-div label {
+      font-size: 14px;
+      padding: 0px 14px; }
+
+.right {
+  padding-left: 48px;
+  display: flex;
+  align-items: center; }
+  .right figure {
+    margin-bottom: 80px; }
+  .right figcaption {
+    font-weight: 300;
+    text-align: center;
+    padding: 0px 10px;
+    width: 250px; }

@@ -1,0 +1,196 @@
+@import "variables";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+figcaption,
+span {
+    font-weight: lighter;
+    color: $dark-color;
+}
+
+
+.outer-container {
+    margin: 0 auto;
+    border: $border;
+    border-radius: $radius-8;
+    padding: 48px 40px 36px;
+    margin: 30px 270px;
+}
+
+.inner-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+%big-text {
+    font-family: $google-font;
+    font-size: 24px;
+}
+
+%medium-text {
+    font-family: $roboto-font;
+    font-size: 16px;
+}
+
+.left {
+    h1 {
+        @extend %big-text;
+        padding: 10px 0;
+    }
+
+    h3 {
+        @extend %medium-text;
+        line-height: 1.5rem;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 28px 0px;
+
+        .left {
+            display: flex;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            font-family: $roboto-font;
+            font-size: 14px;
+            font-weight: bold;
+            color: $blue;
+            padding: 12px;
+            margin-left: -10px;
+
+            &:hover {
+                background: rgb(239, 242, 243);
+            }
+        }
+
+        button {
+            background: $blue;
+            color: white;
+            font-family: $roboto-font;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 10px 24px;
+            border: none;
+            border-radius: $radius-4;
+        }
+    }
+}
+
+%input {
+    padding: 6px 8px;
+    margin: 2px;
+    border: $border;
+    border-radius: $radius-4;
+    color: $dark-color;
+    font-size: 14px;
+    @extend %medium-text;
+    box-sizing: content-box;
+    height: 20px;
+}
+
+input:focus {
+    outline-color: $blue;
+}
+
+form {
+    width: 348px;
+
+    .name-div {
+        padding: 24px 0;
+
+        input {
+            @extend %input;
+            width: 150px;
+        }
+    }
+
+    .user-div {
+        border: $border;
+        border-radius: $radius-4;
+        margin: 2px;
+
+        input {
+            @extend %input;
+            border: none;
+            margin: 0;
+        }
+
+        span {
+            font-size: 14px;
+            margin-left: 60px;
+        }
+
+        &:focus {
+            outline-color: $blue;
+        }
+    }
+
+    .info-div {
+        padding-left: 10px;
+        font-family: $roboto-font;
+
+        span {
+            color: $grey-color;
+            font-size: 12px;
+        }
+    }
+
+    .password-div {
+        padding-top: 24px;
+
+        input {
+            @extend %input;
+            width: 150px;
+        }
+    }
+
+    .checkbox-div {
+        padding: 20px 0px;
+        display: inline-flex;
+
+        input {
+            height: 16px;
+            width: 16px;
+            margin: 0 2px;
+        }
+
+        label {
+            @extend %medium-text;
+            font-size: 14px;
+            padding: 0px 14px;
+        }
+    }
+}
+
+
+
+.right {
+    padding-left: 48px;
+    display: flex;
+    align-items: center;
+
+    figure {
+        margin-bottom: 80px
+    }
+
+    figcaption {
+        @extend %medium-text;
+        font-weight: 300;
+        text-align: center;
+        padding: 0px 10px;
+        width: 250px;
+    }
+}
