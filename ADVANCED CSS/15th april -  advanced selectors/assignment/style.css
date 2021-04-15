@@ -1,0 +1,148 @@
+:root {
+  --padding: 60px;
+  --border: 1px solid #3d3b3b;
+  --dark-color: #3d3c3c;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 10;
+  border-bottom: 4px solid black;
+  padding: 6px var(--padding);
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+  padding: 16px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+a:hover {
+  background: #b9d6f7;
+}
+
+.home-section {
+  margin-top: 0;
+  padding: 0px;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner > img {
+  height: 80vh;
+  width: 100%;
+}
+
+.banner::after {
+  content: "HELLO WORLD !!!";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 80px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 54px;
+  margin: 0px;
+  padding-bottom: 36px;
+  color: #0f033b;
+  text-shadow: 3px 3px 3px;
+}
+
+section {
+  background: #7cc4f3;
+  padding: var(--padding);
+}
+
+section:nth-child(3n + 1) {
+  background: #38a7f1;
+}
+
+.about-section > div {
+  display: flex;
+}
+
+.about-section .content {
+  padding: 0px 40px;
+  line-height: 1.5rem;
+  margin-left: 20px;
+  border: var(--border);
+  box-shadow: 5px -5px 3px rgba(0, 0, 0, 0.5);
+}
+
+.services-section > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services-section div div {
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  background: #faeeee;
+  box-shadow: 10px 10px 3px #084a77;
+}
+
+.services-section i {
+  font-size: 40px;
+  color: var(--dark-color);
+}
+
+.contact-section > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-section > div div {
+  text-align: center;
+  padding: 30px;
+  width: 250px;
+  background: cornsilk;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.contact-section > div div:first-child {
+  width: 350px;
+}
+
+.contact-section i {
+  font-size: 40px;
+  border-radius: 50%;
+  border: 3px dotted blue;
+  padding: 16px;
+}
+
+:target {
+  background: #7f7ff7 !important;
+  border: 2px solid red;
+}
