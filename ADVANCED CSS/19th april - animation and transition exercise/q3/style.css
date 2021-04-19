@@ -1,0 +1,72 @@
+.container {
+  box-sizing: border-box;
+}
+
+.heart-container {
+  position: absolute;
+  top: 200px;
+  left: 300px;
+  /* transform: scale(1.5, 1.5); */
+  animation-name: pumping;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pumping {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.upper-div {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.left {
+  height: 100px;
+  width: 100px;
+  background: red;
+  border-radius: 50%;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 47%;
+}
+
+.right {
+  height: 100px;
+  width: 100px;
+  background: red;
+  border-radius: 50%;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 47%;
+  position: relative;
+  left: -10px;
+}
+
+.lower-div {
+  position: relative;
+}
+
+.bottom {
+  position: absolute;
+  top: -16px;
+  left: 12px;
+  width: 0px;
+  height: 0px;
+  border-left: 83px solid transparent;
+  border-right: 83px solid transparent;
+  border-top: 85px solid red;
+}
